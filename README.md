@@ -1,2 +1,6 @@
 # IkonerSystemScript
-Prosty skrypt z zastosowaniem prostych kroków aby uzyskać dynamiczny, nowoczesny i płynnie działający sposób na wyświetlenie informacji w grze.
+Prosty skrypt z zastosowaniem prostych kroków aby uzyskać dynamiczny, nowoczesny i płynnie działający sposób na wyświetlenie informacji w grze. Wszystko sprowadza się do "nałożenia" skryptu na obiekt przy jakim ma być zainicjowana próba wyświetlenia informacji - np. że w danym miejscu mamy możliwość schowania się czy podniesienia przedmiotu. W moim projekcie pokazywały się informacje w postaci prostych, intuicyjnych ikon z napisami na transparentnym tle. Całość dawała efekt taki jaki był w zamiarze. Skrypt miał też nie wymagać zbyt dużej ingerencji w jego ustawienia, ale miał dostarczać możliwość ich edycji z poziomu Inspektora Unity. Oprócz umieszczenia skryptu w danym obiekcie należy jeszcze przygotować dwie rzeczy: 
+
+==> Pierwszy to collider po jakim ma się aktywować skrypt - jednak obsługa tego zdarzenia musi zostać umieszczona gdzie indziej i nie dotyczy bezpośrednio skryptu. Sam skrypt IkonserSystem udostępnia tylko i wyłącznie API i funkcjonalność która powoduje efekt czy możliwość edycji. Korzystanie z API odbywa się w innym momencie. 
+
+==> Drugą sprawą związaną z poprawnym działaniem całości jest przygotowanie sobie Tekstury - czyli np. grafiki z ikonką, napisu czy czegokolwiek - co ma się pojawić na obiekcie który będzie bazą do wyświetlenia informacji. Co ważne - ten obiekt bazowy możemy albo sami stworzyć, na "sztywno" lub skorzystać z tworzenia w czasie rzeczywistym. 
